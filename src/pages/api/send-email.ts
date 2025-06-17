@@ -32,7 +32,7 @@ export const POST: APIRoute = async ({ request }) => {
     await transporter.sendMail({
       from: email,
       to: import.meta.env.GMAIL_USER,
-      subject: `Nouveau message de ${name}`,
+      subject: 'Nouveau message de ${name}',
       text: message,
     });
 
@@ -41,4 +41,3 @@ export const POST: APIRoute = async ({ request }) => {
     return new Response(JSON.stringify({ error: "Échec de l'envoi" }), { status: 500 });
   }
 };
-
