@@ -16,26 +16,35 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	</div>
 </BaseLayout>
 <script type="module">
-    const form = document.getElementById("contact-form");
-    if (form) {
+  const form = document.getElementById("contact-form");
+  if (form) {
     form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const data = new FormData(form);
+      e.preventDefault();
 
-        const res = await fetch("/.netlify/functions/sendMail", {
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value,
+      };
+
+      const res = await fetch("/.netlify/functions/sendMail", {
         method: "POST",
-        body: data, 
-        });
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-        if (res.ok) {
+      if (res.ok) {
         alert("Message envoyé !");
         form.reset();
-        } else {
+      } else {
         alert("Erreur à l'envoi");
-        }
+      }
     });
-    }
+  }
 </script>
+
 <style>
     .stack {
   display: flex;

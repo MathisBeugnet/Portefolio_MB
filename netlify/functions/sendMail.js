@@ -1,21 +1,22 @@
 exports.handler = async function (event) {
   try {
-    const formData = new URLSearchParams(event.body);
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const message = formData.get("message");
+    const body = JSON.parse(event.body);
+    const name = body.name;
+    const email = body.email;
+    const message = body.message;
 
     console.log("➡️ Données reçues :", { name, email, message });
     console.log("📧 Email envoyé de", process.env.EMAIL_USER, "vers", process.env.EMAIL_TO);
 
-    const transporter = require("nodemailer").createTransport({
+    const nodemailer = require("nodemailer");
+    const transporter = nodemailer.createTransport({
       service: "Gmail",
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
       tls: {
-        rejectUnauthorized: false, // Permet d’éviter l’erreur SSL en local (ne pas garder en prod)
+        rejectUnauthorized: false, // Pour dev local uniquement
       },
     });
 
