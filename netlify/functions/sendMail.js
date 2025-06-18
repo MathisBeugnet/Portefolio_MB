@@ -21,7 +21,7 @@ exports.handler = async function (event) {
       from: email,
       to: process.env.EMAIL_TO,
       subject: `Message de ${name}`,
-      text: message,
+      text: message
     };
 
     const result = await transporter.sendMail(mailOptions);
