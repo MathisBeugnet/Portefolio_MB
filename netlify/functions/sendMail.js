@@ -1,38 +1,41 @@
-const nodemailer = require("nodemailer");
-
 exports.handler = async function (event) {
-  const formData = new URLSearchParams(event.body);
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const message = formData.get("message");
+  try {
+    const formData = new URLSearchParams(event.body);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
 
-  const transporter = nodemailer.createTransport({
-    service: "Gmail",
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-  });
+    console.log("➡️ Données reçues :", { name, email, message });
+    console.log("📧 Email envoyé de", process.env.EMAIL_USER, "vers", process.env.EMAIL_TO);
 
-  const mailOptions = {
-    from: email,
-    to: process.env.EMAIL_TO,
-    subject: `Message de ${name}`,
-    text: message,
-  };
+    const transporter = require("nodemailer").createTransport({
+      service: "Gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
 
-    try {
-    await transporter.sendMail(mailOptions);
+    const mailOptions = {
+      from: email,
+      to: process.env.EMAIL_TO,
+      subject: `Message de ${name}`,
+      text: message,
+    };
+
+    const result = await transporter.sendMail(mailOptions);
+
+    console.log("✅ Résultat Nodemailer :", result);
+
     return {
       statusCode: 200,
       body: JSON.stringify({ message: "Email envoyé" }),
     };
   } catch (error) {
-    console.error("Erreur nodemailer:", error); // ✅ Affiche dans le terminal
+    console.error("❌ Erreur nodemailer:", error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: error.message, full: error }),
+      body: JSON.stringify({ error: error.message }),
     };
   }
-
 };
