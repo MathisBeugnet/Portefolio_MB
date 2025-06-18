@@ -14,10 +14,7 @@ exports.handler = async function (event) {
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
-      },
-      tls: {
-        rejectUnauthorized: false, // Pour dev local uniquement
-      },
+      }
     });
 
     const mailOptions = {
