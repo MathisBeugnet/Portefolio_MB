@@ -21,7 +21,9 @@ import Hero from '../components/Hero.astro';
 			</Hero>
 
 			<section>
-				<h2 class="section-title">A propos <br>de moi</h2>
+				<div class="section-title-wrapper">
+					<h2 class="section-title">À propos <br>de moi</h2>
+				</div>
 				<div class="content">
 					<p>
 						Bonjour, je m’appelle Mathis Beugnet et j'ai 19 ans. Je suis actuellement étudiant
@@ -31,33 +33,46 @@ import Hero from '../components/Hero.astro';
 						<br>Mon objectif aujourd’hui est de trouver une entreprise où je pourrai continuer à apprendre, développer mes compétences, et m’intégrer dans une équipe dynamique et bienveillante.
 					</p>
 				</div>
+				
 			</section>
 			<section>
-				<h2 class="section-title">Parcours</h2>
-				<div class="content">
-					<p>
-						Mettre BTS SIO + pourquoi j'ai choisi slam
-					</p>
-					<p>
-						Détail parcours
-					</p>
+				<div class="section-title-wrapper">
+					<h2 class="section-title">Parcours</h2>
 				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Scolarité</h2>
 				<div class="content">
 					<p>
 						J'ai obtenu un Baccalauréat Général avec les spécialités Mathématiques et NSI (Numérique et Sciences Informatiques), 
       					ce qui m’a permis de développer une première approche de la logique et de la programmation. 
-      					Actuellement, je poursuis mes études en BTS SIO (Services Informatiques aux Organisations), option SLAM (Solutions Logicielles et Applications Métiers), 
-      					où j’approfondis mes compétences en développement, en gestion de projets, et en conception d’applications.
+      					Actuellement, je poursuis mes études en BTS SIO (Services Informatiques aux Organisations), option SLAM (Solutions Logicielles et Applications Métiers)
 					</p>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Compétences</h2>
+				<div class="section-title-wrapper">
+					<h2 class="section-title">Scolarité</h2>
+				</div>
 				<div class="content">
-					<p>HTML,CSS,JS,PHP,C#,SQL...</p>
+					<p>
+						J'étudie en BTS SIO, option SLAM, 
+						où j’approfondis mes compétences en développement, en gestion de projets, et en conception d’applications. 
+						Cela fait suite à mon Baccalauréat Général avec les spécialités Mathématiques et NSI.  
+						Durant ce BTS, je travaille sur plusieurs projets concrets comme la création d’applications et de site web, 
+						la mise en place de bases de données. 
+						Je souhaite continuer à évoluer dans le monde du développement, en apportant des solutions innovantes et efficaces, 
+						tout en intégrant une équipe dynamique et collaborative.
+					</p>
+				</div>
+			</section>
+			<section>
+				<div class="section-title-wrapper">
+					<h2 class="section-title">Compétences</h2>
+				</div>
+				<div class="content">
+					<p>
+						Je possède des compétences en bases de données, développement web et création d’applications. J’utilise plusieurs langages et outils comme SQL, HTML, CSS, PHP, JavaScript, et C#. Je connais aussi les méthodes de modélisation comme UML et Merise.
+						Je suis familier avec la gestion de projets grâce à des outils comme Trello et Git, ainsi qu’avec la mise en place de serveurs et la gestion des systèmes sous Windows et Linux. 
+						Enfin, je suis sensibilisé à la cybersécurité grâce à la certification Secnum.
+					</p>
 				</div>
 			</section>
 		</main>
@@ -87,9 +102,16 @@ import Hero from '../components/Hero.astro';
 	}
 
 	.section-title {
-		grid-column-start: 1;
 		font-size: var(--text-xl);
 		color: var(--gray-0);
+	}
+
+	.section-title-wrapper {
+	display: flex;
+	align-items: center; /* Centre verticalement */
+	justify-content: flex-start; /* ou center pour horizontal aussi */
+	height: 100%; /* prend toute la hauteur du grid-row */
+	grid-column-start: 1;
 	}
 
 	.content {
