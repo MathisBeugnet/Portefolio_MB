@@ -21,16 +21,18 @@ exports.handler = async function (event) {
     text: message,
   };
 
-  try {
+    try {
     await transporter.sendMail(mailOptions);
     return {
       statusCode: 200,
       body: JSON.stringify({ message: "Email envoyé" }),
     };
   } catch (error) {
+    console.error("Erreur nodemailer:", error); // ✅ Affiche dans le terminal
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: error.message }),
+      body: JSON.stringify({ error: error.message, full: error }),
     };
   }
+
 };
