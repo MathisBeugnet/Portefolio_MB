@@ -16,15 +16,16 @@ tags:
 
 D'où vient le projet
 
-### Level-three heading
+### Contexte
 
 Expliquer la demande
 
-### Level-three heading
+### Solution réalisée
 
 Comment j'ai réalisé cela
 
-#### Level-four heading
+#### Compétences mise en avant
 
-- We noted this
-- And also this other point
+- HTML,CSS,JS,PHP
+- Plannification des taches à effectuer
+- Travail en équipe
