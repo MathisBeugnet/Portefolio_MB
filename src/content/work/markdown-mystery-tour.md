@@ -1,14 +1,13 @@
 ---
-title: Markdown Mystery Tour
+title: Angerscoot
 publishDate: 2020-03-02 00:00:00
 img: /assets/stock-1.jpg
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img_alt: Page d'accueil angerscoot
 description: |
-  We designed a whodunnit-style game to introduce Markdown formatting. Suspense — suspicion — syntax!
+  J'ai réalisé un site web à partir d'un problématique complète.
 tags:
   - Design
   - Dev
-  - User Testing
 ---
 
 ## Level-two heading
