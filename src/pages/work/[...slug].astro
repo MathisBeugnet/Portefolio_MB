@@ -19,7 +19,7 @@ interface Props {
 export async function getStaticPaths() {
 	const work = await getCollection('work');
 	return work.map((entry) => ({
-		params: { slug: entry.id },
+		params: { slug: entry.id.replace(/\.md$/, '') },
 		props: { entry },
 	}));
 }
