@@ -12,13 +12,11 @@ tags:
 
 ## Site Web
 
-> J'ai réalisé un site web à partir d'un problématique complète pour une entreprise qui engage des chargeurs pour recharger des véhicules électriques mis à disposition dans les villes.
-
-D'où vient le projet
+> Conception d'un site web en HTML, CSS, JS et PHP
 
 ### Contexte
 
-Expliquer la demande
+J'ai réalisé un site web à partir d'un problématique complète pour une entreprise qui engage des chargeurs pour recharger des véhicules électriques mis à disposition dans les villes.
 
 ### Solution réalisée
 
