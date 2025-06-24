@@ -3,16 +3,16 @@ import Icon from './Icon.astro';
 ---
 
 <section class="box skills">
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="terminal-window" color="var(--accent-regular)" size="2rem" gradient />
-		<h2>Développeur web</h2>
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="terminal-window" color="var(--accent-regular)" size="2rem" gradient />
-		<h2>Dévelopeur d'application</h2>
-	</div>
-	
+  <div class="stack-row gap-2 lg:gap-4">
+    <Icon icon="terminal-window" color="var(--accent-regular)" size="2rem" gradient />
+    <h2>Développeur web</h2>
+  </div>
+  <div class="stack-row gap-2 lg:gap-4">
+    <Icon icon="terminal-window" color="var(--accent-regular)" size="2rem" gradient />
+    <h2>Développeur d'application</h2>
+  </div>
 </section>
+
 
 <style>
 	.box {
@@ -22,6 +22,12 @@ import Icon from './Icon.astro';
 		background-color: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
 	}
+	
+	.stack-row {
+  	display: flex;
+  	align-items: center;
+ 	gap: 1.5rem;
+  	}
 
 	.skills {
 		display: flex;
