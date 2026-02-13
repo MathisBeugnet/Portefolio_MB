@@ -8,8 +8,6 @@
 
 Ce portfolio présente mes projets, compétences et expériences de développement. Construit avec Astro à partir d'un template.
 
-![Screenshot du portfolio](./assets/screen.png)
-
 ## ✨ Fonctionnalités
 
 - **Design Responsive** - Optimisé pour tous les appareils (mobile, tablette, desktop)
