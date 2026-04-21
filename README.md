@@ -30,7 +30,7 @@ Le site sera accessible à l'adresse `https://portefoliomathisbeugnet.netlify.ap
 ## 📫 Contact
 
 - **Email**: mathisbeugnet24@gmail.com
-- **LinkedIn**: [Votre Profil](https://www.linkedin.com/in/mathis-beugnet-139561355/)
+- **LinkedIn**: [Mathis Beugnet](https://www.linkedin.com/in/mathis-beugnet-139561355/)
 - **Portfolio**: [portefoliomathisbeugnet.netlify.app](https://portefoliomathisbeugnet.netlify.app/)
 
 
