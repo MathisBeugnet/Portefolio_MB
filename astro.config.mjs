@@ -1,8 +1,10 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import netlify from '@astrojs/netlify';
+import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
-  output: 'static', // ou tu peux même supprimer cette ligne, 'static' est la valeur par défaut
-  adapter: netlify()
+  output: 'static',
+  adapter: netlify(),
+  integrations: [tailwind()],
 });

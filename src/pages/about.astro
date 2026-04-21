@@ -13,16 +13,44 @@ import Hero from '../components/Hero.astro';
 			>
 			</Hero>
 
+			<div class="profile-photo-wrapper">
+				<img
+					class="profile-photo"
+					src="/assets/portrait.jpg"
+					alt="Photo de profil de Mathis Beugnet"
+					width="200"
+					height="200"
+				/>
+			</div>		
 			<section>
 				<div class="section-title-wrapper">
 					<h2 class="section-title">Présentation</h2>
 				</div>
 				<div class="content">
 					<p>
-						Mathis Beugnet, 19 ans, étudiant en BTS SIO option SLAM. 
+						Mathis Beugnet, 20 ans, étudiant en BTS SIO option SLAM. 
 						Passionné par le développement web et applicatif, je cherche à intégrer une équipe dynamique 
 						pour développer mes compétences et relever de nouveaux défis.
 					</p>
+					<p class="disponibility">
+						🎯 Actuellement à la recherche d'un poste en développement web ou applicatif.
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<div class="section-title-wrapper">
+					<h2 class="section-title">Expériences</h2>
+				</div>
+				<div class="content">
+					<div class="experience-item">
+						<div class="experience-header">
+							<strong>ALTERNANT DEVELOPPEMENT IT</strong>
+							<span class="experience-date">Septembre 2025 – Juillet 2026</span>
+						</div>
+						<span class="experience-company">Bucher Vaslin — Chalonnes-sur-Loire</span>
+						<p>Description courte de ce que tu as fait : technos utilisées, missions, résultats.</p>
+					</div>
 				</div>
 			</section>
 
@@ -31,9 +59,10 @@ import Hero from '../components/Hero.astro';
 					<h2 class="section-title">Formation</h2>
 				</div>
 				<div class="content">
-					<p>
-						BTS SIO option SLAM en cours • Bac Général (Mathématiques, NSI) • 
-						Projets : applications web, bases de données • Certification Secnum (cybersécurité)
+					<p> 
+						Bac Général (Mathématiques, NSI)<br>
+						BTS SIO option SLAM<br>
+						Certification SecNum (cybersécurité)
 					</p>
 				</div>
 			</section>
@@ -44,10 +73,33 @@ import Hero from '../components/Hero.astro';
 				</div>
 				<div class="content">
 					<p>
-						Langages : SQL, HTML, CSS, PHP, JavaScript, C# • 
-						Modélisation : UML, Merise • 
-						Outils : Git, Trello • 
-						Systèmes : Windows, Linux
+						<strong>Langages :</strong> SQL, HTML, CSS, PHP, JavaScript, C#, PowerFX<br> 
+						<strong>Modélisation :</strong> UML, Merise<br> 
+						<strong>Outils :</strong> Git, Trello, Notion, Visual Studio Code, Microsoft 365<br> 
+						<strong>Systèmes :</strong> Windows, Linux
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<div class="section-title-wrapper">
+					<h2 class="section-title">Langues</h2>
+				</div>
+				<div class="content">
+					<p>
+						Français — Langue maternelle<br>
+						Anglais — Niveau B1 
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<div class="section-title-wrapper">
+					<h2 class="section-title">Centres d'intérêt</h2>
+				</div>
+				<div class="content">
+					<p>
+						Sport (Basketball), Jeux vidéo
 					</p>
 				</div>
 			</section>
@@ -56,11 +108,28 @@ import Hero from '../components/Hero.astro';
 		<ContactCTA />
 	</div>
 </BaseLayout>
+
 <style>
 	.about {
 		display: flex;
 		flex-direction: column;
 		gap: 3.5rem;
+	}
+
+	/* === PHOTO DE PROFIL === */
+	.profile-photo-wrapper {
+		display: flex;
+		justify-content: center;
+	}
+
+	.profile-photo {
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		object-fit: cover;
+		box-shadow: var(--shadow-md);
+		border: 3px solid var(--accent-regular, #7c3aed);
+		margin-top: 0;
 	}
 
 	img {
@@ -82,11 +151,11 @@ import Hero from '../components/Hero.astro';
 	}
 
 	.section-title-wrapper {
-	display: flex;
-	align-items: center; /* Centre verticalement */
-	justify-content: flex-start; /* ou center pour horizontal aussi */
-	height: 100%; /* prend toute la hauteur du grid-row */
-	grid-column-start: 1;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		height: 100%;
+		grid-column-start: 1;
 	}
 
 	.content {
@@ -104,6 +173,41 @@ import Hero from '../components/Hero.astro';
 		text-decoration-color: currentColor;
 	}
 
+	.disponibility {
+		margin-top: 0.75rem;
+		padding: 0.6rem 1rem;
+		border-left: 3px solid var(--accent-regular, #7c3aed);
+		background: var(--gray-999, rgba(255,255,255,0.03));
+		border-radius: 0 0.5rem 0.5rem 0;
+		font-size: var(--text-sm);
+	}
+
+	.experience-item {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+		margin-bottom: 1.25rem;
+	}
+
+	.experience-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.experience-date {
+		font-size: var(--text-sm);
+		color: var(--gray-400);
+	}
+
+	.experience-company {
+		font-size: var(--text-sm);
+		color: var(--gray-300);
+		font-style: italic;
+	}
+
 	@media (min-width: 50em) {
 		.about {
 			display: grid;
@@ -117,6 +221,12 @@ import Hero from '../components/Hero.astro';
 		section {
 			display: contents;
 			font-size: var(--text-lg);
+		}
+
+		/* Sur desktop, la photo s'aligne dans la colonne centrale */
+		.profile-photo-wrapper {
+			grid-column: 2 / 3;
+			justify-content: flex-start;
 		}
 	}
 </style>
