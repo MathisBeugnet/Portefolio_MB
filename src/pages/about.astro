@@ -7,12 +7,6 @@ import Hero from '../components/Hero.astro';
 <BaseLayout title="À propos | Mathis Beugnet" description="A propos de Mathis Beugnet">
 	<div class="stack gap-20">
 		<main class="wrapper about">
-			<Hero
-				title="À propos"
-				tagline="Merci de votre visite. Découvrez mon parcours et mes compétences."
-			>
-			</Hero>
-
 			<div class="profile-photo-wrapper">
 				<img
 					class="profile-photo"
@@ -21,7 +15,16 @@ import Hero from '../components/Hero.astro';
 					width="200"
 					height="200"
 				/>
-			</div>		
+			</div>
+
+			<div class="hero-wrapper">
+				<Hero
+					title="À propos"
+					tagline="Merci de votre visite. Découvrez mon parcours et mes compétences."
+				>
+				</Hero>
+			</div>
+
 			<section>
 				<div class="section-title-wrapper">
 					<h2 class="section-title">Présentation</h2>
@@ -132,6 +135,12 @@ import Hero from '../components/Hero.astro';
 		margin-top: 0;
 	}
 
+	/* Annule le style générique img pour la photo de profil */
+	.profile-photo-wrapper img {
+		margin-top: 0;
+		border-radius: 50%;
+	}
+
 	img {
 		margin-top: 1.5rem;
 		border-radius: 1.5rem;
@@ -214,19 +223,16 @@ import Hero from '../components/Hero.astro';
 			grid-template-columns: 1fr 60% 1fr;
 		}
 
-		.about > :global(:first-child) {
-			grid-column-start: 2;
+		/* La photo et le Hero occupent tous les deux la colonne centrale */
+		.profile-photo-wrapper,
+		.hero-wrapper {
+			grid-column: 2 / 3;
+			justify-content: center;
 		}
 
 		section {
 			display: contents;
 			font-size: var(--text-lg);
-		}
-
-		/* Sur desktop, la photo s'aligne dans la colonne centrale */
-		.profile-photo-wrapper {
-			grid-column: 2 / 3;
-			justify-content: flex-start;
 		}
 	}
 </style>

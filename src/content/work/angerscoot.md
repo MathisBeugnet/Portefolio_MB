@@ -28,7 +28,6 @@ Le projet a été découpé en plusieurs phases : conception de la maquette, cr�
 
 Ce projet m’a permis de mettre en pratique mes compétences techniques tout en développant ma capacité à planifier un projet web de bout en bout et à travailler efficacement en équipe.
 
-Souhaites-tu que je l’adapte à un style plus synthétique ou plus formel selon un
 
 #### Compétences mise en avant
 

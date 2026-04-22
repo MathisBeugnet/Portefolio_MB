@@ -24,8 +24,8 @@ exports.handler = async function (event) {
       from: `"${name}" <${process.env.EMAIL_USER}>`,
       replyTo: email,
       to: process.env.EMAIL_TO,
-      subject: `Message de ${name}`,
-      text: message
+      subject: `Contact depuis le portfolio de ${name}`,
+      text: `Message de ${name} (${email}) : ${message}`
     };
 
     const result = await transporter.sendMail(mailOptions);
