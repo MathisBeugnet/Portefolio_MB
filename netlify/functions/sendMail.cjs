@@ -24,7 +24,7 @@ exports.handler = async function (event) {
       from: `"${name}" <${process.env.EMAIL_USER}>`,
       replyTo: email,
       to: process.env.EMAIL_TO,
-      subject: `Contact depuis le portfolio de ${name}`,
+      subject: `Contact depuis le portfolio`,
       text: `Message de ${name} (${email}) : ${message}`
     };
 
