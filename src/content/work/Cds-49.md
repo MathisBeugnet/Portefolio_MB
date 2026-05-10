@@ -1,22 +1,42 @@
 ---
 title: CDS 49
 publishDate: 2019-12-01 00:00:00
-img: /assets/stock-2.jpg
-img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
+img: /assets/CDS49.png
+img_alt: Logo CDS 49
 description: |
-  Site Web en Laravel
+  Application lourde en C#
 tags:
   - Dev
   - Design
-  - Backend
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit. In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper. Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor, placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit non, aliquet at magna. Donec id leo ut nulla sagittis sodales.
+## Application Client Lourd
 
-Integer vitae nibh elit. Suspendisse eget urna eu neque bibendum pharetra. Sed interdum lectus sem, in pulvinar magna dignissim vel. Quisque maximus at urna nec laoreet. Suspendisse potenti. Vestibulum rhoncus sem ut mi pellentesque, in vestibulum erat blandit. Aliquam sodales dui ac maximus consectetur. Duis quis est vehicula, imperdiet nisl nec, fermentum erat. Duis tortor diam, pharetra eu euismod in, vehicula non eros. Curabitur facilisis dui at erat ultrices gravida. In at nunc ultricies, pulvinar mi vel, sagittis mauris. Praesent pharetra posuere purus ac imperdiet. Nulla facilisi.
+> Développement d'une application C# Windows Forms pour l'auto-école CDS 49
 
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
+### Contexte
 
-Mauris sed eros in ex maximus volutpat. Suspendisse potenti. Donec lacinia justo consectetur sagittis tempor. Proin ullamcorper nisi vitae auctor rhoncus. Sed tristique aliquam augue. Pellentesque vitae fringilla ligula. Nulla arcu elit, efficitur eu nunc malesuada, eleifend tincidunt orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer mattis orci in bibendum ultricies. Quisque a dui erat. Phasellus et vulputate ipsum. Proin metus ex, lobortis nec ornare eget, bibendum ut sapien. Aliquam in dolor lobortis, aliquam tellus a, congue augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+L'auto-école CDS 49 (Chevrollier Driving School) s'est engagée dans une transformation numérique de ses services. Dans le cadre de ce projet, une solution multi-plateforme a été développée par une équipe de 3 personnes, incluant une application web PHP, une application mobile Flutter et une application client lourd C#, toutes connectées à une base de données MySQL centralisée.
 
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
+J'ai pris en charge le développement de l'**application client lourd** destinée au personnel de l'auto-école, réalisée avec **C# Windows Forms** et l'ORM **Entity Framework Core** pour l'accès aux données.
+
+### Solution réalisée
+
+L'application permet au personnel administratif de gérer l'ensemble des données de l'auto-école depuis une interface de bureau :
+
+- **Gestion des élèves** : consultation de la liste des élèves (lecture du CRUD), visualisation des forfaits souscrits par élève et activation d'un forfait.
+- **Gestion des forfaits** : liste des forfaits existants avec possibilité de suppression.
+- **Gestion des moniteurs** : création, consultation et modification des moniteurs, avec envoi automatique d'un email lors de l'ajout d'un nouveau moniteur.
+
+L'application s'intègre dans l'architecture existante déployée sur un serveur Alpine Linux sous Docker, avec une base de données MariaDB mutualisée. La sécurité des accès a été travaillée en suivant les recommandations **OWASP**.
+
+Le projet a été géré avec des outils collaboratifs (GitLab pour le versionning, Trello pour la planification) sur une durée de 9 séances.
+
+### Compétences mises en avant
+
+- C# / Windows Forms
+- Entity Framework Core (ORM)
+- Base de données MySQL / MariaDB
+- Architecture client-serveur
+- Sécurité applicative (OWASP)
+- Travail en équipe et versionning (GitLab)

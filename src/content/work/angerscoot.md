@@ -1,10 +1,10 @@
 ---
 title: Angerscoot
 publishDate: 2020-03-02 00:00:00
-img: /assets/stock-1.jpg
-img_alt: Page d'accueil angerscoot
+img: /assets/Angerscoot.jpg
+img_alt: Logo Angerscoot
 description: |
-  Site web réalisé en php.
+  Site web réalisé en PHP
 tags:
   - Design
   - Dev
@@ -16,21 +16,27 @@ tags:
 
 ### Contexte
 
-J'ai réalisé un site web à partir d'un problématique complète pour une entreprise qui engage des chargeurs pour recharger des véhicules électriques mis à disposition dans les villes.
+AngerScoot est une entreprise proposant un service de location de scooters et trottinettes électriques sur la ville d'Angers. Afin de réduire ses coûts de rechargement, l'entreprise fait appel à des chargeurs externes (auto-entrepreneurs) qui récupèrent les véhicules déchargés chaque soir, les rechargent, puis les remettent en circulation.
+
+Dans le cadre de ce projet scolaire réalisé en binôme, j'ai pris en charge le développement du **site web** destiné aux chargeurs.
 
 ### Solution réalisée
 
-Pour répondre à la problématique de l’entreprise, j’ai conçu un site web dynamique permettant de gérer efficacement les opérations de recharge des véhicules électriques. J’ai commencé par analyser les besoins fonctionnels et techniques de l’entreprise, puis j’ai planifié les différentes étapes de développement.
+Le site a été développé en **HTML, CSS, JavaScript et PHP**, avec une base de données MySQL. Il couvre l'ensemble du parcours d'un chargeur :
 
-Le site a été développé en HTML, CSS, JavaScript et PHP. J’ai utilisé HTML et CSS pour structurer et styliser les pages web, JavaScript pour intégrer des interactions dynamiques (comme la mise à jour en temps réel des disponibilités de chargeurs), et PHP pour gérer la partie serveur, notamment l'enregistrement des utilisateurs, la gestion des réservations, et la connexion à une base de données MySQL.
+- **Page d'accueil publique** : présentation du service et formulaire de connexion.
+- **Inscription** : saisie des coordonnées, login et mot de passe, avec confirmation de l'envoi des justificatifs requis (carte d'identité, justificatif de domicile, immatriculation auto-entrepreneur). Le compte ne devient actif qu'après validation par l'administrateur.
+- **Espace chargeur connecté** : affichage du nom, du numéro d'immatriculation et des informations de la société, récapitulatif des recharges du mois en cours, et accès rapide aux différentes fonctionnalités.
+- **Saisie des recharges** : formulaire permettant d'enregistrer une ou plusieurs recharges effectuées dans la journée.
+- **Saisie d'incidents** : signalement de problèmes rencontrés sur un véhicule, avec mise hors service possible et enregistrement automatique de la date d'incident.
+- **Suivi des gains** : liste des véhicules traités avec calcul du gain potentiel par véhicule, total mensuel, et sélection d'un mois passé via une liste déroulante.
 
-Le projet a été découpé en plusieurs phases : conception de la maquette, création des interfaces utilisateurs, développement des fonctionnalités principales (authentification, réservation, tableau de bord), et tests. J’ai également collaboré avec d’autres membres de l’équipe pour répartir les tâches et intégrer nos différentes parties de manière cohérente.
+Le projet a été planifié en plusieurs étapes : conception du MCD et de la charte graphique, maquettage, développement et présentation orale finale.
 
-Ce projet m’a permis de mettre en pratique mes compétences techniques tout en développant ma capacité à planifier un projet web de bout en bout et à travailler efficacement en équipe.
+### Compétences mises en avant
 
-
-#### Compétences mise en avant
-
-- HTML,CSS,JS,PHP
-- Plannification des taches à effectuer
-- Travail en équipe
+- HTML, CSS, JavaScript, PHP
+- Base de données MySQL
+- Authentification et gestion de sessions
+- Planification de projet (Trello)
+- Travail en équipe / binôme
