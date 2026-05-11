@@ -13,7 +13,7 @@ tags:
 ## Site Web
 
 > Conception d'un site web en Laravel dans le cadre du festival Cale Sons
-
+![Page Accueil](../../../public/assets/page_accueil.png)
 ### Contexte
 
 Le festival Cale Sons, après une annulation due à des incertitudes budgétaires, cherche à se réinventer pour son édition 2026 (4 jours en août). L'objectif est de re-dynamiser l'événement et de mieux gérer les différentes manifestations (concerts, expositions, conférences, ateliers) autour d'une thématique annuelle, en touchant un public jeune et connecté.

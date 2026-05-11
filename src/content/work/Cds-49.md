@@ -28,7 +28,7 @@ L'application permet au personnel administratif de gérer l'ensemble des donnée
 - **Gestion des forfaits** : liste des forfaits existants avec possibilité de suppression.
 - **Gestion des moniteurs** : création, consultation et modification des moniteurs, avec envoi automatique d'un email lors de l'ajout d'un nouveau moniteur.
 
-L'application s'intègre dans l'architecture existante déployée sur un serveur Alpine Linux sous Docker, avec une base de données MariaDB mutualisée. La sécurité des accès a été travaillée en suivant les recommandations **OWASP**.
+L'application s'intègre dans l'architecture existante déployée sur un serveur Alpine Linux sous Docker, avec une base de données MySQL mutualisée. La sécurité des accès a été travaillée en suivant les recommandations **OWASP**.
 
 Le projet a été géré avec des outils collaboratifs (GitLab pour le versionning, Trello pour la planification) sur une durée de 9 séances.
 
@@ -36,7 +36,7 @@ Le projet a été géré avec des outils collaboratifs (GitLab pour le versionni
 
 - C# / Windows Forms
 - Entity Framework Core (ORM)
-- Base de données MySQL / MariaDB
+- Base de données MySQL 
 - Architecture client-serveur
 - Sécurité applicative (OWASP)
 - Travail en équipe et versionning (GitLab)
